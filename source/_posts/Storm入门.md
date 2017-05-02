@@ -6,7 +6,7 @@ tags: storm,bigdata
 ## 简介
 - 免费且开源的实时计算系统
 - 简单可靠的处理流式数据，而Hadoop是使用的批处理
-- 不受开发语言的限制（thrift）
+- 不受开发语言的限制（kryo序列化库）
 
 
 ## hadoop/spark/storm等对比
@@ -25,6 +25,7 @@ tags: storm,bigdata
 ## storm核心概念
 ### 官方抽象图 
 ![image](http://note.youdao.com/yws/res/2424/WEBRESOURCE9b85a55e7196b3a6dc04f95e76dc9f53)
+![image](http://jstorm.io:8080/img/quickstart/conception/spoutbolt.jpg)
 ### 集群结构图
 ![image](http://www.aboutyun.com/data/attachment/forum/201404/15/225641mt3v1okkkrkkp3rk.jpg)
 
@@ -59,3 +60,82 @@ Storm里面最核心的抽象，Streams使用tuple，tuples可以理解为最小
 
 
 ## 举个例子
+```java
+/**
+ * This topology demonstrates Storm's stream groupings and multilang capabilities.
+ * source: https://github.com/apache/storm/blob/v1.0.3/examples/storm-starter/src/jvm/org/apache/storm/starter/WordCountTopology.java
+ */
+public class WordCountTopology {
+  public static class SplitSentence extends ShellBolt implements IRichBolt {
+
+    public SplitSentence() {
+      super("python", "splitsentence.py");
+    }
+
+    @Override
+    public void declareOutputFields(OutputFieldsDeclarer declarer) {
+      declarer.declare(new Fields("word"));
+    }
+
+    @Override
+    public Map<String, Object> getComponentConfiguration() {
+      return null;
+    }
+  }
+
+  public static class WordCount extends BaseBasicBolt {
+    Map<String, Integer> counts = new HashMap<String, Integer>();
+
+    @Override
+    public void execute(Tuple tuple, BasicOutputCollector collector) {
+      String word = tuple.getString(0);
+      Integer count = counts.get(word);
+      if (count == null)
+        count = 0;
+      count++;
+      counts.put(word, count);
+      collector.emit(new Values(word, count));
+    }
+
+    @Override
+    public void declareOutputFields(OutputFieldsDeclarer declarer) {
+      declarer.declare(new Fields("word", "count"));
+    }
+  }
+  
+  /**
+   * 主方法
+   */
+  public static void main(String[] args) throws Exception {
+
+    TopologyBuilder builder = new TopologyBuilder();
+
+    // 设置输入
+    builder.setSpout("spout", new RandomSentenceSpout(), 5);
+    
+    // 计算
+    builder.setBolt("split", new SplitSentence(), 8).shuffleGrouping("spout");
+
+    builder.setBolt("count", new WordCount(), 12).fieldsGrouping("split", new Fields("word"));
+
+    Config conf = new Config();
+    conf.setDebug(true);
+
+    if (args != null && args.length > 0) {
+      conf.setNumWorkers(3);
+
+      StormSubmitter.submitTopologyWithProgressBar(args[0], conf, builder.createTopology());
+    }
+    else {
+      conf.setMaxTaskParallelism(3);
+
+      LocalCluster cluster = new LocalCluster();
+      cluster.submitTopology("word-count", conf, builder.createTopology());
+
+      Thread.sleep(10000);
+
+      cluster.shutdown();
+    }
+  }
+}
+```
