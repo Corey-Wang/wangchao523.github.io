@@ -1,6 +1,7 @@
 ---
 title: salt-api
 date: 2017-03-23 18:42:26
+categories: 技术
 tags: salt
 ---
 

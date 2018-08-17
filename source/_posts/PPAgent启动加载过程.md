@@ -1,6 +1,7 @@
 ---
 title: PPAgent启动加载过程
 date: 2017-06-02 17:02:47
+categories: 技术
 tags: pinpoint
 ---
 #### 知识点

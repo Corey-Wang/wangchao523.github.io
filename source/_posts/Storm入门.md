@@ -1,7 +1,9 @@
 ---
 title: Storm入门
 date: 2017-03-21 12:45:34
+categories: 技术
 tags: storm,bigdata
+img: https://ws3.sinaimg.cn/large/006tNbRwly1fucf2lxhgyj30xc0dwmxh.jpg
 ---
 ## 简介
 - 免费且开源的实时计算系统
@@ -24,7 +26,7 @@ tags: storm,bigdata
 
 ## storm核心概念
 ### 官方抽象图 
-![image](http://note.youdao.com/yws/res/2424/WEBRESOURCE9b85a55e7196b3a6dc04f95e76dc9f53)
+![image](https://ws3.sinaimg.cn/large/006tNbRwly1fucf2lxhgyj30xc0dwmxh.jpg)
 ![image](http://jstorm.io:8080/img/quickstart/conception/spoutbolt.jpg)
 ### 集群结构图
 ![image](http://www.aboutyun.com/data/attachment/forum/201404/15/225641mt3v1okkkrkkp3rk.jpg)

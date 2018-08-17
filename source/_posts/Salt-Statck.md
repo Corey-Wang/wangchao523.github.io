@@ -1,6 +1,7 @@
 ---
 title: Salt Statck
 date: 2017-03-23 18:39:47
+categories: 技术
 tags: salt
 ---
 

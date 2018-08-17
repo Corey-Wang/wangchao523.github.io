@@ -1,6 +1,7 @@
 ---
 title: PHP  详解
 date: 2017-05-05 09:54:10
+categories: 技术
 tags: PHP
 ---
 ### 超全局变量

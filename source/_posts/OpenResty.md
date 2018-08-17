@@ -1,6 +1,7 @@
 ---
 title: OpenResty
 date: 2017-04-25 18:20:29
+categories: 技术
 tags: OpenResty
 ---
 ### 一句话介绍
