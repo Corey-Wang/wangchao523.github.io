@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Corey.Wang">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://corey.wang">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Storm入门 | Corey.Wang</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Corey.Wang" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Corey Wang'>
+            <img src="/img/avatar.png" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Corey.Wang </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://corey.wang">Corey.Wang</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/技术/"><i class="fa "></i>技术</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Storm入门">
+            
+	            Storm入门
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/技术">
+            技术
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/storm,bigdata" title='storm,bigdata'>
+                        storm,bigdata
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/03/21</span>
+        </span>
+    
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>513</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>免费且开源的实时计算系统</li>
+<li>简单可靠的处理流式数据，而Hadoop是使用的批处理</li>
+<li>不受开发语言的限制（kryo序列化库）</li>
+</ul>
+<h2 id="hadoop-spark-storm等对比"><a href="#hadoop-spark-storm等对比" class="headerlink" title="hadoop/spark/storm等对比"></a>hadoop/spark/storm等对比</h2><table>
+<thead>
+<tr>
+<th>*</th>
+<th>hadoop M/R</th>
+<th>spark</th>
+<th>storm </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>存储</td>
+<td>磁盘</td>
+<td>内存</td>
+<td>内存 </td>
+</tr>
+<tr>
+<td>数据集</td>
+<td>现有数据集</td>
+<td>现有数据集</td>
+<td>实时 </td>
+</tr>
+<tr>
+<td>任务状态</td>
+<td>作业管理</td>
+<td>作业管理</td>
+<td>常住内存 </td>
+</tr>
+<tr>
+<td>常用场景</td>
+<td>离线的复杂的大数据处理</td>
+<td>离线的快速大数据处理</td>
+<td>在线的实时的大数据处理</td>
+</tr>
+</tbody>
+</table>
+<p><em>Spark Streaming和Storm类似</em></p>
+<p><a href="http://www.cnblogs.com/snowbook/p/5773562.html" target="_blank" rel="noopener">read more</a></p>
+<h2 id="storm核心概念"><a href="#storm核心概念" class="headerlink" title="storm核心概念"></a>storm核心概念</h2><h3 id="官方抽象图"><a href="#官方抽象图" class="headerlink" title="官方抽象图"></a>官方抽象图</h3><p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fucf2lxhgyj30xc0dwmxh.jpg" alt="image"><br><img src="http://jstorm.io:8080/img/quickstart/conception/spoutbolt.jpg" alt="image"></p>
+<h3 id="集群结构图"><a href="#集群结构图" class="headerlink" title="集群结构图"></a>集群结构图</h3><p><img src="http://www.aboutyun.com/data/attachment/forum/201404/15/225641mt3v1okkkrkkp3rk.jpg" alt="image"></p>
+<h3 id="Topologies"><a href="#Topologies" class="headerlink" title="Topologies"></a>Topologies</h3><p>一个完整的计算主体，相当于是一个M/R任务，区别是M/R任务执行完会退出，而topology永远运行（除非被主动kill）</p>
+<h3 id="Streams、tuples"><a href="#Streams、tuples" class="headerlink" title="Streams、tuples"></a>Streams、tuples</h3><p>Storm里面最核心的抽象，Streams使用tuple，tuples可以理解为最小的数据类型元组，可以为 integers, longs, shorts, bytes, strings, doubles, floats, booleans, and byte arrays。也支持自定义可序列化的类型</p>
+<h3 id="Spout"><a href="#Spout" class="headerlink" title="Spout"></a>Spout</h3><p>数据源，一般是消息队列，将数据发送到Bolts</p>
+<h3 id="Bolts"><a href="#Bolts" class="headerlink" title="Bolts"></a>Bolts</h3><p>具体执行数据分析的节点</p>
+<h3 id="Stream-groupings"><a href="#Stream-groupings" class="headerlink" title="Stream groupings"></a>Stream groupings</h3><p>定义了每个bolt的数据发送策略</p>
+<ul>
+<li>shuffle grouping</li>
+<li>fields grouping</li>
+<li>All grouping(广播，所有bolts都会收到)</li>
+<li>etc.</li>
+</ul>
+<p><img src="http://www.aboutyun.com/data/attachment/forum/201404/15/225648a4s3a4a4ll2la0l3.jpg" alt="image"></p>
+<p><a href="http://blog.itpub.net/29754888/viewspace-1260026/" target="_blank" rel="noopener">read more1</a> <a href="http://storm.apache.org/releases/1.0.3/Concepts.html" target="_blank" rel="noopener">read more2</a></p>
+<h2 id="数据的一致性，可靠性"><a href="#数据的一致性，可靠性" class="headerlink" title="数据的一致性，可靠性"></a>数据的一致性，可靠性</h2><ul>
+<li>每个tuple拥有一个messageId</li>
+<li>Acker机制，每个Topology拥有一个Acker，可以追踪messageId</li>
+<li>Spout、Bolt发出数据后通知Acker自己处理的messageId</li>
+<li>消息处理失败后，Tuple会被重新发出</li>
+</ul>
+<h2 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * This topology demonstrates Storm's stream groupings and multilang capabilities.</span></span><br><span class="line"><span class="comment"> * source: https://github.com/apache/storm/blob/v1.0.3/examples/storm-starter/src/jvm/org/apache/storm/starter/WordCountTopology.java</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCountTopology</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SplitSentence</span> <span class="keyword">extends</span> <span class="title">ShellBolt</span> <span class="keyword">implements</span> <span class="title">IRichBolt</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SplitSentence</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(<span class="string">"python"</span>, <span class="string">"splitsentence.py"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">declareOutputFields</span><span class="params">(OutputFieldsDeclarer declarer)</span> </span>&#123;</span><br><span class="line">      declarer.declare(<span class="keyword">new</span> Fields(<span class="string">"word"</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getComponentConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCount</span> <span class="keyword">extends</span> <span class="title">BaseBasicBolt</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Integer&gt; counts = <span class="keyword">new</span> HashMap&lt;String, Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(Tuple tuple, BasicOutputCollector collector)</span> </span>&#123;</span><br><span class="line">      String word = tuple.getString(<span class="number">0</span>);</span><br><span class="line">      Integer count = counts.get(word);</span><br><span class="line">      <span class="keyword">if</span> (count == <span class="keyword">null</span>)</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">      count++;</span><br><span class="line">      counts.put(word, count);</span><br><span class="line">      collector.emit(<span class="keyword">new</span> Values(word, count));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">declareOutputFields</span><span class="params">(OutputFieldsDeclarer declarer)</span> </span>&#123;</span><br><span class="line">      declarer.declare(<span class="keyword">new</span> Fields(<span class="string">"word"</span>, <span class="string">"count"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 主方法</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    TopologyBuilder builder = <span class="keyword">new</span> TopologyBuilder();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置输入</span></span><br><span class="line">    builder.setSpout(<span class="string">"spout"</span>, <span class="keyword">new</span> RandomSentenceSpout(), <span class="number">5</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 计算</span></span><br><span class="line">    builder.setBolt(<span class="string">"split"</span>, <span class="keyword">new</span> SplitSentence(), <span class="number">8</span>).shuffleGrouping(<span class="string">"spout"</span>);</span><br><span class="line"></span><br><span class="line">    builder.setBolt(<span class="string">"count"</span>, <span class="keyword">new</span> WordCount(), <span class="number">12</span>).fieldsGrouping(<span class="string">"split"</span>, <span class="keyword">new</span> Fields(<span class="string">"word"</span>));</span><br><span class="line"></span><br><span class="line">    Config conf = <span class="keyword">new</span> Config();</span><br><span class="line">    conf.setDebug(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (args != <span class="keyword">null</span> &amp;&amp; args.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      conf.setNumWorkers(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">      StormSubmitter.submitTopologyWithProgressBar(args[<span class="number">0</span>], conf, builder.createTopology());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      conf.setMaxTaskParallelism(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">      LocalCluster cluster = <span class="keyword">new</span> LocalCluster();</span><br><span class="line">      cluster.submitTopology(<span class="string">"word-count"</span>, conf, builder.createTopology());</span><br><span class="line"></span><br><span class="line">      Thread.sleep(<span class="number">10000</span>);</span><br><span class="line"></span><br><span class="line">      cluster.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © Corey.Wang
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/03/23/Salt-Statck/" class="pre-post btn btn-default" title='Salt Statck'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Salt Statck</span>
+        </a>
+    
+    
+        <a href="/2017/03/01/hello-world/" class="next-post btn btn-default" title='推荐使用Hexo搭建个人博客'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">推荐使用Hexo搭建个人博客</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-Hans'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hadoop-spark-storm等对比"><span class="toc-text">hadoop/spark/storm等对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storm核心概念"><span class="toc-text">storm核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#官方抽象图"><span class="toc-text">官方抽象图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集群结构图"><span class="toc-text">集群结构图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Topologies"><span class="toc-text">Topologies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Streams、tuples"><span class="toc-text">Streams、tuples</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spout"><span class="toc-text">Spout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bolts"><span class="toc-text">Bolts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stream-groupings"><span class="toc-text">Stream groupings</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据的一致性，可靠性"><span class="toc-text">数据的一致性，可靠性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#举个例子"><span class="toc-text">举个例子</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
