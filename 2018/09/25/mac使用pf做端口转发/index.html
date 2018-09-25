@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>Salt Statck | Corey.Wang</title>
+<title>mac使用pf做端口转发 | Corey.Wang</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Corey.Wang" type="application/atom+xml">
@@ -132,9 +132,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Salt Statck">
+        <h1 id="mac使用pf做端口转发">
             
-	            Salt Statck
+	            mac使用pf做端口转发
             
         </h1>
         <div class="post-meta">
@@ -142,8 +142,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/技术">
-            技术
+        <a href="/categories/ ">
+             
         </a>
     </span>
     
@@ -153,8 +153,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/salt" title='salt'>
-                        salt
+                    <a href="/tags/mac, proxy" title='mac, proxy'>
+                        mac, proxy
                     </a>
                 
             
@@ -166,37 +166,25 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2017/03/23</span>
+            <span class="date-meta">2018/09/25</span>
         </span>
     
 </div>
 
             
             
-            <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>550</strong>天之前发表，文中内容可能已经过时。
-            </p>
-        
     </div>
     
     <div class="post-body post-content">
-        <ul>
-<li><p>简介</p>
-<blockquote>
-<p>SaltStack是一个服务器基础架构集中化管理平台，具备配置管理、远程执行、监控等功能，一般可以理解为简化版的puppet和加强版的func。SaltStack基于Python语言实现，结合轻量级消息队列（ZeroMQ）与Python第三方模块（Pyzmq、PyCrypto、Pyjinjia2、python-msgpack和PyYAML等）构建。<br>通过部署SaltStack环境，我们可以在成千上万台服务器上做到批量执行命令，根据不同业务特性进行配置集中化管理、分发文件、采集服务器数据、操作系统基础及软件包管理等，SaltStack是运维人员提高工作效率、规范业务配置与操作的利器。</p>
-</blockquote>
-</li>
-<li><p>使用版本</p>
-<blockquote>
-<p>2016.11<br><a href="https://github.com/saltstack/salt" target="_blank" rel="noopener">https://github.com/saltstack/salt</a></p>
-</blockquote>
-</li>
-<li><p>测试环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1台master， 2台minion</span><br><span class="line">```        </span><br><span class="line"> </span><br><span class="line">- 模块及配置</span><br><span class="line">&gt; salt-master</span><br><span class="line">&gt; salt-minion</span><br><span class="line">&gt; [salt-api](http://corey.wang/2017/03/23/salt-api/)</span><br><span class="line"> </span><br><span class="line">- salt命令解析 [blog](http://arlen.blog.51cto.com/7175583/1424684)  [blog2](http://noodle.blog.51cto.com/2925423/1744607)  [官方文档](https://docs.saltstack.com/en/latest/ref/cli/salt.html)</span><br><span class="line"></span><br><span class="line">- &lt;b&gt;个人整理&lt;/b&gt;</span><br><span class="line">```salt &apos;&lt;target&gt;&apos; &lt;function&gt; [arguments]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">salt &apos;*&apos; cp.get_file salt://jdk-8u121-linux-x64.rpm  /tmp/jdk-8u121-linux-x64.rpm  #把salt-master端对应文件拷贝到minion端相应目录下, salt://默认为/srv/salt，master中可以配置</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;rpm -ivh /tmp/jdk-8u121-linux-x64.rpm&apos; #远程安装jdk， 可以增加template=jinja，使命令支持jinja模板，方便不同机器自动替换相应的参数</span><br><span class="line">salt &apos;*&apos; cp.get_file salt://apache-tomcat-8.0.35.zip /tmp/apache-tomcat-8.0.35.zip #copy tomcat到minion</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.run &apos;cd ~ &amp; mkdir tools&apos; #远程创建tools文件夹，如果该文件夹已存在，*会报错*，使用salt &apos;*&apos; file.mkdir /tmp/wangchao36-test命令也可以</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;unzip /tmp/apache-tomcat-8.0.35.zip -d /root/tools/&apos; #解压tomcat</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;chmod +x /root/tools/apache-tomcat-8.0.35/bin/*.sh &amp; /root/tools/apache-tomcat-8.0.35/bin/startup.sh&apos; #启动tomcat</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;ps -ef | grep tomcat&apos;  # 查看tomcat关键词的进程</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">salt &apos;*&apos; pkg.install httpd #执行安装命令, 相当于apt-get, yum</span><br><span class="line">salt &apos;*&apos; lowpkg.bin_pkg_info /tmp/jdk-8u121-linux-x64.rpm # 查询rpm包信息，lowpkg相当于rpm命令</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.script salt://scripts/runme.sh #远程执行一个脚本</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.run &apos;pip install psutil&apos; #ps模块需要提前安全psutil</span><br><span class="line">salt &apos;*&apos; ps.pgrep tomcat full=true  #查询tomcat相关进程的pid</span><br><span class="line">salt &apos;*&apos; ps.psaux tomcat #ps aux |grep tomcat</span><br><span class="line"> </span><br><span class="line">salt &apos;*&apos; file.append /root/tools/apache-tomcat-8.0.35/bin/catalina.sh dddd  #在文件尾增加</span><br><span class="line">salt &apos;*&apos; file.grep /root/tools/apache-tomcat-8.0.35/bin/catalina.sh ddd #文件中查找</span><br><span class="line">salt &apos;*&apos; file.comment_line /root/tools/apache-tomcat-8.0.35/bin/catalina.sh ddd #行加注释</span><br><span class="line">salt &apos;*&apos; file.seek_read /root/tools/apache-tomcat-8.0.35/bin/catalina.sh 1000 0 #读</span><br><span class="line">salt &apos;*&apos; file.seek_write /root/tools/apache-tomcat-8.0.35/bin/catalina.sh &apos;#xxx&apos;1000 #写 1000为offset</span><br></pre></td></tr></table></figure>
-
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>线上一个问题，但和cookie有关，需要用到域名，所以通过本地host来将域名指向127.0.0.1， 但由于https端口只能是443了，mac无法直接绑定，需要使用ROOT权限。<br>所以想到可以使用端口转发的技术，网上搜到了pfctl。</p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="新建转发规则"><a href="#新建转发规则" class="headerlink" title="新建转发规则"></a>新建转发规则</h3><p>在这个目录下<code>/etc/pf.anchors</code> 新建一个文件，如443（名称自定定义就行），内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rdr pass on lo0 inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 8443</span><br></pre></td></tr></table></figure></p>
+<p>lo0是网卡，可以通过<code>ifconfig</code>查看127.0.0.1对应的网卡名</p>
+<h3 id="将配置添加到pf-conf中"><a href="#将配置添加到pf-conf中" class="headerlink" title="将配置添加到pf.conf中"></a>将配置添加到pf.conf中</h3><p><code>/etc/pf.conf</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scrub-anchor &quot;com.apple/*&quot;</span><br><span class="line">nat-anchor &quot;com.apple/*&quot;</span><br><span class="line">rdr-anchor &quot;com.apple/*&quot;</span><br><span class="line">rdr-anchor &quot;forwarding&quot;</span><br><span class="line">dummynet-anchor &quot;com.apple/*&quot;</span><br><span class="line">anchor &quot;com.apple/*&quot;</span><br><span class="line">load anchor &quot;com.apple&quot; from &quot;/etc/pf.anchors/com.apple&quot;</span><br><span class="line">load anchor &quot;forwarding&quot; from &quot;/etc/pf.anchors/443&quot;</span><br></pre></td></tr></table></figure></p>
+<p>其中4行，8行的<code>forwarding</code>是新增的，<code>com.apple</code>是系统自带的。注意这里一定要保证顺序</p>
+<h3 id="启动pf"><a href="#启动pf" class="headerlink" title="启动pf"></a>启动pf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -ef /etc/pf.conf</span><br></pre></td></tr></table></figure>
+<h3 id="关闭pf"><a href="#关闭pf" class="headerlink" title="关闭pf"></a>关闭pf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -d</span><br></pre></td></tr></table></figure>
+<h3 id="强制重启"><a href="#强制重启" class="headerlink" title="强制重启"></a>强制重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -E</span><br></pre></td></tr></table></figure>
+<h3 id="更多介绍"><a href="#更多介绍" class="headerlink" title="更多介绍"></a>更多介绍</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 自己来看吧</span><br><span class="line">man pfctl</span><br></pre></td></tr></table></figure>
     </div>
 
     <div class="post-footer">
@@ -213,15 +201,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2017/03/23/salt-api/" class="pre-post btn btn-default" title='salt-api'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">salt-api</span>
-        </a>
     
-    
-        <a href="/2017/03/21/Storm入门/" class="next-post btn btn-default" title='Storm入门'>
+        <a href="/2018/08/21/vscode--extensions-install/" class="next-post btn btn-default" title='vscode extensions install'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Storm入门</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">vscode extensions install</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -264,7 +247,7 @@
     <div class="widget">
         <h3 class="title">Table of Contents</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作步骤"><span class="toc-text">操作步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建转发规则"><span class="toc-text">新建转发规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将配置添加到pf-conf中"><span class="toc-text">将配置添加到pf.conf中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动pf"><span class="toc-text">启动pf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭pf"><span class="toc-text">关闭pf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制重启"><span class="toc-text">强制重启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更多介绍"><span class="toc-text">更多介绍</span></a></li></ol></li></ol>
         
     </div>
 </aside>
