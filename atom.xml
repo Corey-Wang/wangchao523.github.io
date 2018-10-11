@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Corey.Wang</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://corey.wang/"/>
+  <updated>2018-10-11T11:12:44.075Z</updated>
+  <id>http://corey.wang/</id>
+  
+  <author>
+    <name>Corey Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>职场学习比较遵循721原则</title>
+    <link href="http://corey.wang/2018/10/11/%E8%81%8C%E5%9C%BA%E5%AD%A6%E4%B9%A0%E6%AF%94%E8%BE%83%E9%81%B5%E5%BE%AA721%E5%8E%9F%E5%88%99/"/>
+    <id>http://corey.wang/2018/10/11/职场学习比较遵循721原则/</id>
+    <published>2018-10-11T11:12:23.000Z</published>
+    <updated>2018-10-11T11:12:44.075Z</updated>
+    
+    <content type="html"><![CDATA[<p>70%来自于工作实践；20%来自他人经验传授；10%来自理论的学习</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;70%来自于工作实践；20%来自他人经验传授；10%来自理论的学习&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="个人品牌" scheme="http://corey.wang/tags/%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非职权影响力</title>
+    <link href="http://corey.wang/2018/10/11/%E9%9D%9E%E8%81%8C%E6%9D%83%E5%BD%B1%E5%93%8D%E5%8A%9B/"/>
+    <id>http://corey.wang/2018/10/11/非职权影响力/</id>
+    <published>2018-10-11T07:32:31.000Z</published>
+    <updated>2018-10-11T08:41:22.270Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本概念定义"><a href="#基本概念定义" class="headerlink" title="基本概念定义"></a>基本概念定义</h1><p>影响力是运用力量以改变某个人的:个性、理念认知、或行为行动。 这些力量包括:丼证引例、造成恐惧、赞美肯定、权势财富等等。</p><p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fw4bibnlknj31kw1ms1e7.jpg" alt=""></p><h1 id="为什么要有非职权影响力"><a href="#为什么要有非职权影响力" class="headerlink" title="为什么要有非职权影响力"></a>为什么要有非职权影响力</h1><p>在没有职权的情况，如何推动项目、如果让自己的想法落地/目标达成。在当前大环境中越来越需要团队配合，这方面更需要个人影响力来达成目标。</p><h1 id="个人口碑"><a href="#个人口碑" class="headerlink" title="个人口碑"></a>个人口碑</h1><p>如何建立个人口碑</p><h1 id="其他资料"><a href="#其他资料" class="headerlink" title="其他资料"></a>其他资料</h1><p>TED-影响力 <a href="https://www.ted.com/talks/angela_lee_duckworth_grit_the_power_of_passion_and_perseverance?language=zh-tw" target="_blank" rel="noopener">https://www.ted.com/talks/angela_lee_duckworth_grit_the_power_of_passion_and_perseverance?language=zh-tw</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;基本概念定义&quot;&gt;&lt;a href=&quot;#基本概念定义&quot; class=&quot;headerlink&quot; title=&quot;基本概念定义&quot;&gt;&lt;/a&gt;基本概念定义&lt;/h1&gt;&lt;p&gt;影响力是运用力量以改变某个人的:个性、理念认知、或行为行动。 这些力量包括:丼证引例、造成恐惧、赞美肯定、权
+      
+    
+    </summary>
+    
+    
+      <category term="个人品牌" scheme="http://corey.wang/tags/%E4%B8%AA%E4%BA%BA%E5%93%81%E7%89%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac使用pf做端口转发</title>
+    <link href="http://corey.wang/2018/09/25/mac%E4%BD%BF%E7%94%A8pf%E5%81%9A%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    <id>http://corey.wang/2018/09/25/mac使用pf做端口转发/</id>
+    <published>2018-09-25T01:55:08.000Z</published>
+    <updated>2018-09-25T02:07:35.834Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>线上一个问题，但和cookie有关，需要用到域名，所以通过本地host来将域名指向127.0.0.1， 但由于https端口只能是443了，mac无法直接绑定，需要使用ROOT权限。<br>所以想到可以使用端口转发的技术，网上搜到了pfctl。</p><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="新建转发规则"><a href="#新建转发规则" class="headerlink" title="新建转发规则"></a>新建转发规则</h3><p>在这个目录下<code>/etc/pf.anchors</code> 新建一个文件，如443（名称自定定义就行），内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rdr pass on lo0 inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 8443</span><br></pre></td></tr></table></figure></p><p>lo0是网卡，可以通过<code>ifconfig</code>查看127.0.0.1对应的网卡名</p><h3 id="将配置添加到pf-conf中"><a href="#将配置添加到pf-conf中" class="headerlink" title="将配置添加到pf.conf中"></a>将配置添加到pf.conf中</h3><p><code>/etc/pf.conf</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scrub-anchor &quot;com.apple/*&quot;</span><br><span class="line">nat-anchor &quot;com.apple/*&quot;</span><br><span class="line">rdr-anchor &quot;com.apple/*&quot;</span><br><span class="line">rdr-anchor &quot;forwarding&quot;</span><br><span class="line">dummynet-anchor &quot;com.apple/*&quot;</span><br><span class="line">anchor &quot;com.apple/*&quot;</span><br><span class="line">load anchor &quot;com.apple&quot; from &quot;/etc/pf.anchors/com.apple&quot;</span><br><span class="line">load anchor &quot;forwarding&quot; from &quot;/etc/pf.anchors/443&quot;</span><br></pre></td></tr></table></figure></p><p>其中4行，8行的<code>forwarding</code>是新增的，<code>com.apple</code>是系统自带的。注意这里一定要保证顺序</p><h3 id="启动pf"><a href="#启动pf" class="headerlink" title="启动pf"></a>启动pf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -ef /etc/pf.conf</span><br></pre></td></tr></table></figure><h3 id="关闭pf"><a href="#关闭pf" class="headerlink" title="关闭pf"></a>关闭pf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -d</span><br></pre></td></tr></table></figure><h3 id="强制重启"><a href="#强制重启" class="headerlink" title="强制重启"></a>强制重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pfctl -E</span><br></pre></td></tr></table></figure><h3 id="更多介绍"><a href="#更多介绍" class="headerlink" title="更多介绍"></a>更多介绍</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 自己来看吧</span><br><span class="line">man pfctl</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;线上一个问题，但和cookie有关，需要用到域名，所以通过本地host来将域名指向127.0.0.1， 但由于https端口只能是443了，
+      
+    
+    </summary>
+    
+    
+      <category term="mac, proxy" scheme="http://corey.wang/tags/mac-proxy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode extensions install</title>
+    <link href="http://corey.wang/2018/08/21/vscode--extensions-install/"/>
+    <id>http://corey.wang/2018/08/21/vscode--extensions-install/</id>
+    <published>2018-08-21T03:23:50.000Z</published>
+    <updated>2018-08-23T06:09:04.376Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在搞一个vscode插件，但由于公司内容使用，无法发不到市场，所以必须自己搞一个升级能力</p><h2 id="命令行安装插件"><a href="#命令行安装插件" class="headerlink" title="命令行安装插件"></a>命令行安装插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code --install-extension vsix_file</span><br></pre></td></tr></table></figure><p>如果提示没有code命令，需要在在vscode中执行 cmd+shift+p –&gt; Shell Command: Install ‘code’ command in PATH</p><h2 id="vscode安装插件源码分析（通过vsix包安装）"><a href="#vscode安装插件源码分析（通过vsix包安装）" class="headerlink" title="vscode安装插件源码分析（通过vsix包安装）"></a>vscode安装插件源码分析（通过vsix包安装）</h2><p><a href="https://github.com/Microsoft/vscode/blob/master/src/vs/platform/extensionManagement/node/extensionManagementService.ts" target="_blank" rel="noopener">https://github.com/Microsoft/vscode/blob/master/src/vs/platform/extensionManagement/node/extensionManagementService.ts</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">install(zipPath: string): TPromise&lt;void&gt; &#123;</span><br><span class="line">    zipPath = path.resolve(zipPath);</span><br><span class="line"></span><br><span class="line">    return validateLocalExtension(zipPath)</span><br><span class="line">        .then(manifest =&gt; &#123;</span><br><span class="line">            const identifier = &#123; id: getLocalExtensionIdFromManifest(manifest) &#125;;</span><br><span class="line">            if (manifest.engines &amp;&amp; manifest.engines.vscode &amp;&amp; !isEngineValid(manifest.engines.vscode)) &#123;</span><br><span class="line">                return TPromise.wrapError&lt;void&gt;(new Error(nls.localize(&apos;incompatible&apos;, &quot;Unable to install Extension &apos;&#123;0&#125;&apos; as it is not compatible with Code &apos;&#123;1&#125;&apos;.&quot;, identifier.id, pkg.version)));</span><br><span class="line">            &#125;</span><br><span class="line">            return this.removeIfExists(identifier.id)</span><br><span class="line">                .then(</span><br><span class="line">                    () =&gt; this.checkOutdated(manifest)</span><br><span class="line">                        .then(validated =&gt; &#123;</span><br><span class="line">                            if (validated) &#123;</span><br><span class="line">                                this.logService.info(&apos;Installing the extension:&apos;, identifier.id);</span><br><span class="line">                                this._onInstallExtension.fire(&#123; identifier, zipPath &#125;);</span><br><span class="line">                                return this.getMetadata(getGalleryExtensionId(manifest.publisher, manifest.name))</span><br><span class="line">                                    .then(</span><br><span class="line">                                        metadata =&gt; this.installFromZipPath(identifier, zipPath, metadata, manifest),</span><br><span class="line">                                        error =&gt; this.installFromZipPath(identifier, zipPath, null, manifest))</span><br><span class="line">                                    .then(</span><br><span class="line">                                        () =&gt; &#123; this.logService.info(&apos;Successfully installed the extension:&apos;, identifier.id); &#125;,</span><br><span class="line">                                        e =&gt; &#123;</span><br><span class="line">                                            this.logService.error(&apos;Failed to install the extension:&apos;, identifier.id, e.message);</span><br><span class="line">                                            return TPromise.wrapError(e);</span><br><span class="line">                                        &#125;);</span><br><span class="line">                            &#125;</span><br><span class="line">                            return null;</span><br><span class="line">                        &#125;),</span><br><span class="line">                    e =&gt; TPromise.wrapError(new Error(nls.localize(&apos;restartCode&apos;, &quot;Please restart Code before reinstalling &#123;0&#125;.&quot;, manifest.displayName || manifest.name))));</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="我的实现"><a href="#我的实现" class="headerlink" title="我的实现"></a>我的实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">    * 插件升级</span><br><span class="line">    */</span><br><span class="line">   public async extensionUpdate() &#123;</span><br><span class="line">       console.log(&apos;coding extension is updating...&apos;);</span><br><span class="line">       const ext = vscode.extensions.getExtension(&apos;coding&apos;);</span><br><span class="line">       if (ext !== undefined) &#123;</span><br><span class="line">           const json = ext.packageJSON;</span><br><span class="line">           request(`$&#123;SERVER_URL_BASE&#125;versionUpdate?name=$&#123;json.id&#125;&amp;v=$&#123;json.version&#125;`, function (error, response, body) &#123;</span><br><span class="line">               if (response &amp;&amp; response.statusCode === 200) &#123;</span><br><span class="line">                   const localDir = `$&#123;os.homedir&#125;/.coding/vsix/`;</span><br><span class="line">                   </span><br><span class="line">                   if (!fs.existsSync(localDir)) &#123;</span><br><span class="line">                       fs.mkdirSync(localDir);</span><br><span class="line">                   &#125;</span><br><span class="line">                   const updateJson = JSON.parse(body);</span><br><span class="line">                   download(updateJson.vsix, localDir, &#123;filename: &apos;coding-new.vsix&apos;&#125;).then(() =&gt; &#123;</span><br><span class="line">                       const vsix = `$&#123;localDir&#125;coding-new.vsix`;</span><br><span class="line">                       cp.exec(`bin/code --install-extension $&#123;vsix&#125;`, &#123;cwd: vscode.env.appRoot&#125;, (error, stdout, stderr) =&gt; &#123;</span><br><span class="line">                           if (error) &#123;</span><br><span class="line">                               console.error(`exec error: $&#123;error&#125;`);</span><br><span class="line">                               return;</span><br><span class="line">                           &#125; else if (stderr) &#123;</span><br><span class="line">                               console.error(`stderr: $&#123;stderr&#125;`);</span><br><span class="line">                               return;</span><br><span class="line">                           &#125; else if (stdout.indexOf(&apos;successfully installed&apos;) &lt; 0) &#123;</span><br><span class="line">                               console.log(`stdout: $&#123;stdout&#125;`);</span><br><span class="line">                               return;</span><br><span class="line">                           &#125;</span><br><span class="line">                           console.log(`stdout: $&#123;stdout&#125;`);</span><br><span class="line">                           fs.unlinkSync(vsix);        // delete file</span><br><span class="line">                           vscode.window.showInformationMessage(&apos;Successfully installed the coding extension. Reload to enable it.&apos;, &apos;Reload Now&apos;).then(selected =&gt; &#123;</span><br><span class="line">                               if (selected === &apos;Reload Now&apos;) &#123;</span><br><span class="line">                                   vscode.commands.executeCommand(&apos;workbench.action.reloadWindow&apos;);</span><br><span class="line">                               &#125;</span><br><span class="line">                           &#125;);</span><br><span class="line">                           console.log(&apos;coding of extension update successed!&apos;);</span><br><span class="line">                           </span><br><span class="line">                       &#125;);</span><br><span class="line">                   &#125;);</span><br><span class="line">               &#125; else &#123;</span><br><span class="line">                   console.log(&apos;update check error response code: &apos;, response);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;最近在搞一个vscode插件，但由于公司内容使用，无法发不到市场，所以必须自己搞一个升级能力&lt;/p&gt;
+&lt;h2 id=&quot;命令行安装插件&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+      <category term="技术 vscode" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF-vscode/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>经历手足(二)</title>
+    <link href="http://corey.wang/2018/08/20/%E7%BB%8F%E5%8E%86%E6%89%8B%E8%B6%B3%E5%8F%A32/"/>
+    <id>http://corey.wang/2018/08/20/经历手足口2/</id>
+    <published>2018-08-19T16:16:14.000Z</published>
+    <updated>2018-08-19T16:25:46.797Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="情况转好"><a href="#情况转好" class="headerlink" title="情况转好"></a>情况转好</h1><p>又是一个周末，离发现病情已经一周了。这个周末原本是计划去草原玩的，再不去草就该黄了。但当前的情况让我直接放弃了本次计划。<br>周五是七夕，丸子妈妈加班到晚上11点才回家，完美的错过了七夕。不过也挺好，避开了人山人海的商场。<br>周五晚上回来，询问了丸子的情况，可以自己吃饭了，而且不再喊嘴疼了，我看了看下嘴唇，泡还是有的。</p><h1 id="大病初愈"><a href="#大病初愈" class="headerlink" title="大病初愈"></a>大病初愈</h1><p>周末的两天，感觉那个能吃能喝的丸子回来了，坐在自己的小桌子上，一口气吃了7个饺子，还吃了不少菜，喝了一碗鱼粥。<br>能吃能喝就是好，人也有精神了，一天往楼下跑五六趟，都不带累的。<br>奶奶、爷爷、丸子妈妈还有我也就放心多了。</p><h1 id="后续观察"><a href="#后续观察" class="headerlink" title="后续观察"></a>后续观察</h1><p>虽然情况已经转好了，但还没有过病毒期（医院说是2周），为避免传染给其他小朋友，我们还是尽量在人少的地方玩或者自己玩。<br>继续观察下周的情况吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;情况转好&quot;&gt;&lt;a href=&quot;#情况转好&quot; class=&quot;headerlink&quot; title=&quot;情况转好&quot;&gt;&lt;/a&gt;情况转好&lt;/h1&gt;&lt;p&gt;又是一个周末，离发现病情已经一周了。这个周末原本是计划去草原玩的，再不去草就该黄了。但当前的情况让我直接放弃了本次计划。&lt;b
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://corey.wang/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>幼儿园的报名（一）</title>
+    <link href="http://corey.wang/2018/08/17/%E5%B9%BC%E5%84%BF%E5%9B%AD%E7%9A%84%E6%8A%A5%E5%90%8D1/"/>
+    <id>http://corey.wang/2018/08/17/幼儿园的报名1/</id>
+    <published>2018-08-17T01:26:11.000Z</published>
+    <updated>2018-08-17T01:31:36.686Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="幼儿园报名"><a href="#幼儿园报名" class="headerlink" title="幼儿园报名"></a>幼儿园报名</h1><h2 id="今年在为明年的幼儿园奔波"><a href="#今年在为明年的幼儿园奔波" class="headerlink" title="今年在为明年的幼儿园奔波"></a>今年在为明年的幼儿园奔波</h2><p>小丸子马上两岁了，平常我和丸子妈妈也会带她一起在楼下玩，有几个经常一起玩的小伙伴已经三岁了，今年九月份就要上幼儿园了。于是我们也参与了幼儿园的讨论，自己也咨询了周边的几个幼儿园，特别好的机关幼儿园直接把我们非企业单位的子女拒之门外。门口的培杰幼儿园时我的兜底的备选，因为这儿不需要提前报名，但由于刚办没两年，收费贵、家长评论好坏不一，心里多少有些担心，唯一也是最大的好处就是近，离小区100米内的距离。<br>然而丸子妈妈却不想就这样算了，毕竟要找个相对好些的。<br>后来聊天谈起了万科的为明幼儿园，整体环境、网上评价以及身边人的评价都是相对好些的。所以将目标锁定再了这个幼儿园</p><h2 id="为明一点不光明"><a href="#为明一点不光明" class="headerlink" title="为明一点不光明"></a>为明一点不光明</h2><p>从万科商场回来的路上，绕路路过了为明幼儿园，再门口和保安简单的沟通了下报名的时间，这会儿大概是在3，4月份的样子，具体的日子已经忘了。<br>心里还是不方向，第二天早晨拨打了幼儿园的电话，让人抓狂的时一个小时反复的拨打竟然没有人接。再吃午饭前运气好，电话接通了。我不是很确定对方是不是负责招生这块，但我得到了一个确定的讯息：可提前一年报亲子班，第二年可以直接入园，就不需要再排队了。简单咨询了亲子班报名的要求，然而并没有具体信息，只是让等通知，具体通知他们会在幼儿园附近发传单，大概是在6，7月份左右。<br>挂了电话，我在想，平常也不会经过幼儿园，再加上工作日早出晚归，幼儿园的传单基本是不会发到我手里了。<br>再后来，这事也慢慢的忘记了。再次想起来是小区幼儿园微信群里开始讨论报名的事情。这会丸子妈妈开始催我去万科幼儿园问问。正好那几天我休假在家。<br>还记得那几天下着特大的雨，早晨带着两把伞，但是还是淋湿了上衣。<br>在商场玩到中午一点多，丸子已经睡着了。我坐在商场的角落里，也半睡半醒的样子。<br>大概刚过两点钟，我实在坐不住了，推着小车出了商场，这会雨还在下着。<br>一刻钟后我来到了幼儿园门口，看到有其他家长带着孩子过来，我跟门卫聊了几句。门卫让我先登个记，结果发现我没有北京户口，而且也不是万科的业主，看着很不情愿的样子，也没有打算让我进园里的意思，简单的说了几句让我回家等消息，便把我打发了。</p><h2 id="意见不一致会怎样"><a href="#意见不一致会怎样" class="headerlink" title="意见不一致会怎样"></a>意见不一致会怎样</h2><p>我心里还是比较反感这类事情，内心认为既然这样，那我干嘛非去不可呢。但恰恰相反，就在某天，小丸子的小伙伴家在万科报上了亲子班，丸子妈妈这时坐不住了，对我各种指挥，就差发12道加急圣旨了。<br>今天（写文章当天）听103.9聊婚房的事情，主持人说两个人结婚前一定要做的事情是一起出去旅游，还有另一件事是装修房子，这样会把双方的磨合的更好。现在我想加一条：教育孩子。<br>当然了，我是属于爱妥协的那一方。毕竟再教育孩子方面双方都是摸索着做，没有必然的对错。也为了避免产生更大的矛盾。</p><h2 id="终于报名了"><a href="#终于报名了" class="headerlink" title="终于报名了"></a>终于报名了</h2><p>就在悠悠报名后的俩小时，我出现在了幼儿园，且上次和门卫有过交流，知道了他们的套路，我成功了绕过了门卫，进了楼里边。但却被其他老师告知管招聘的老师休假了，要一周后回来。但我也很纳闷刚刚小伙伴才报完的啊！<br>回到公司后和丸子妈妈聊起这事，被鄙视的无地自容。<br>第二天一早，丸子妈妈、我、小丸子仨人一起去了幼儿园，当得到相同结论的时候，我内心可以算松了一口气。<br>一周后的早晨，我带着小丸子又来了幼儿园，这次招生的老师在呢，而且悠悠的爸爸提前给老师打了招呼，整个报名还算顺利，中间回家拿了趟证件，当天就把信息都登记完了。然后给开了体检的要求。一般到这步，说明已经接收了，终于可以放心了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;幼儿园报名&quot;&gt;&lt;a href=&quot;#幼儿园报名&quot; class=&quot;headerlink&quot; title=&quot;幼儿园报名&quot;&gt;&lt;/a&gt;幼儿园报名&lt;/h1&gt;&lt;h2 id=&quot;今年在为明年的幼儿园奔波&quot;&gt;&lt;a href=&quot;#今年在为明年的幼儿园奔波&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://corey.wang/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>经历手足口（一）</title>
+    <link href="http://corey.wang/2018/08/17/%E7%BB%8F%E5%8E%86%E6%89%8B%E8%B6%B3%E5%8F%A31/"/>
+    <id>http://corey.wang/2018/08/17/经历手足口1/</id>
+    <published>2018-08-17T01:10:43.000Z</published>
+    <updated>2018-08-17T01:11:36.082Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="听说手足口病"><a href="#听说手足口病" class="headerlink" title="听说手足口病"></a>听说手足口病</h1><p>相信有孩子的人对这个病并不陌生，也非常多的家庭经历过这种病。<br>当小丸子一岁的时候（大概去年这会儿），再小区遛弯时，听小区的阿姨说门口幼儿园有个孩子得手足口了，好像是咱们小区的。具体是谁不清楚，整个幼儿园都放假了。<br>回到家和老妈聊起这事，对他们的反应挺惊讶，让人感觉这是特别严重的病，于是自己搜了百科，补了知识。然而事情没有发生到自己身上，而后就忘记了</p><h1 id="是否接种"><a href="#是否接种" class="headerlink" title="是否接种"></a>是否接种</h1><p>手足口疫苗接种再北京的疫苗计划中是可选的，本着能不打就不打的原则，包括水痘在内都没有接种，所以也没有在意</p><h1 id="赶紧去体检"><a href="#赶紧去体检" class="headerlink" title="赶紧去体检"></a>赶紧去体检</h1><p>小丸子的幼儿园亲子班已经报名通过了，剩下了体检，孩子和大人都需要检查，身体健康才能愉快的玩耍，这个还是有必要的。<br>第二天早晨7点半就带着小丸子出门了，计划着八点前能到，排队取号。尽快完事好吃饭上班。然而尴尬的是我排了半天队，却选错了地方（以为是在预防接种哪里）。还好离得不远，赶过去已经八点半了。队伍排了很长，都是来做体检入园的，看年龄都应该在三岁以上。<br>大概排了40分钟，领了体检单子，看了下内容，仅仅包含三项：身高体重、视力听力、抽血。唯独抽血人排了很长的队。<br>不知道什么时候起，小丸子开始害怕打针抽血了，完全没有了一年前的勇敢，后来她跟我说：爸爸，打针疼。</p><h1 id="体检不合格"><a href="#体检不合格" class="headerlink" title="体检不合格"></a>体检不合格</h1><p>小丸子的检查还算顺利，只不过结果需要等三天。<br>周四的早晨我也赶紧去妇幼挂号体验了，这个队伍可不比孩子体检的短。包含很多去幼儿工作的人。丸子妈妈检查完跟我说：看看体检的人，感觉整个教育水平真低，为孩子上学担忧。<br>我的体检结果下午就出来了，然而却不合格！<br>间隔一周，我又去补检，还是不合格！<br>不知道身体出了什么问题，放弃检查了。</p><h1 id="接种水痘"><a href="#接种水痘" class="headerlink" title="接种水痘"></a>接种水痘</h1><p>幼儿园要求上亲子班前需要接种水痘。于是赶紧再体检后的第二周的周三下午去接种了水痘。</p><h1 id="手足口来了"><a href="#手足口来了" class="headerlink" title="手足口来了"></a>手足口来了</h1><p>周末带小丸子出去玩，再外边吃的饭，可是她却什么都不想吃，抱着一大杯西瓜汁喝个没完，后来又喝了点酸奶。<br>我也根本没有在意，毕竟以前也出现过类似的情况。<br>周一下边回家，丸子奶奶说小丸子嘴疼，看着里面有泡。丸子妈妈拿着手机照着亮，检查了下口腔。两边脸颊一边一个。<br>还好妇幼晚上还有人值班，去抽血做了检查。<br>大夫告知这是手足口，询问了些情况，比如有没有发烧之类的。<br>开了些药就让回家休息了，两周内少出门，少和其他小朋友接触，避免传染。</p><h1 id="利巴韦林"><a href="#利巴韦林" class="headerlink" title="利巴韦林"></a>利巴韦林</h1><p>第二天，我在家陪小丸子，她还是那个状态，什么都不吃，肚子已经瘪了，奶也不喝，除非是饿急了，一天下来才喝了三顿奶。<br>丸子妈妈打电话回来问了问情况，然后让我去买利巴韦林喷雾。<br>我在网上搜了下送药服务，并没有发现这个药。<br>晚上，又去了趟妇幼医院，跟大夫说要这个药，大夫没好气的把我说了一顿，大概是乱吃药的原因，跟我说别光信网上说的那些。这个药跟你家姑娘不对症。<br>喷雾只有14块钱，大夫也懒得跟我讲道理了，说：这药也不贵，我给你开个吧，但吃不吃你自己看，我是不建议使用这个。<br>我当然也知道为什么了，副作用特别的大。</p><h1 id="煎熬的日子"><a href="#煎熬的日子" class="headerlink" title="煎熬的日子"></a>煎熬的日子</h1><p>第二天再我的陪同下，小丸子是滴水补喝，药也不吃。<br>第三天丸子妈妈在家，整个状态好很多，妈妈给发的QQ视频，看小丸子完全变了个人，玩滑梯、喝豆花、喝黄瓜水、跟妈妈玩钓鱼。感觉完全好了一样。但一天也没吃药。<br>第四天早晨起来，又没精神了，应该还是嘴巴疼。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;听说手足口病&quot;&gt;&lt;a href=&quot;#听说手足口病&quot; class=&quot;headerlink&quot; title=&quot;听说手足口病&quot;&gt;&lt;/a&gt;听说手足口病&lt;/h1&gt;&lt;p&gt;相信有孩子的人对这个病并不陌生，也非常多的家庭经历过这种病。&lt;br&gt;当小丸子一岁的时候（大概去年这会儿），再
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://corey.wang/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PPAgent启动加载过程</title>
+    <link href="http://corey.wang/2017/06/02/PPAgent%E5%90%AF%E5%8A%A8%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/"/>
+    <id>http://corey.wang/2017/06/02/PPAgent启动加载过程/</id>
+    <published>2017-06-02T09:02:47.000Z</published>
+    <updated>2018-08-17T01:00:44.985Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><blockquote><p>-javaagent xxx.jar,  实现premain()<br>Class.getConstructor<br>java.lang.reflect.Constructor<br>ServiceLoader.load, 简单理解是获取某个接口（服务）的实现类，扫描META-INF/services下的配置<br>TraceMetadataProvider接口的实现类<br>ClassFileTransformer.transform, 重点看ProfilePluginLoader实现类</p></blockquote><h4 id="图一"><a href="#图一" class="headerlink" title="图一"></a>图一</h4><p><img src="/img/article/PPAgent启动加载过程.jpg"></p><h4 id="图二"><a href="#图二" class="headerlink" title="图二"></a>图二</h4><p><img src="/img/article/DefaultTraceMetadataLoaderService加载过程.jpg"></p><h4 id="图三"><a href="#图三" class="headerlink" title="图三"></a>图三</h4><p><img src="/img/article/DefaultAgent加载过程.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;知识点&quot;&gt;&lt;a href=&quot;#知识点&quot; class=&quot;headerlink&quot; title=&quot;知识点&quot;&gt;&lt;/a&gt;知识点&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;-javaagent xxx.jar,  实现premain()&lt;br&gt;Class.getConstruc
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="pinpoint" scheme="http://corey.wang/tags/pinpoint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP  详解</title>
+    <link href="http://corey.wang/2017/05/05/PHP-%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://corey.wang/2017/05/05/PHP-详解/</id>
+    <published>2017-05-05T01:54:10.000Z</published>
+    <updated>2018-08-17T01:00:47.653Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="超全局变量"><a href="#超全局变量" class="headerlink" title="超全局变量"></a>超全局变量</h3><p><a href="http://php.net/manual/zh/language.variables.superglobals.php" target="_blank" rel="noopener">http://php.net/manual/zh/language.variables.superglobals.php</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$_SERVER[&apos;PHP_SELF&apos;]               #当前正在执行脚本的文件名，与 document root相关。</span><br><span class="line">$_SERVER[&apos;argv&apos;]                   #传递给该脚本的参数。</span><br><span class="line">$_SERVER[&apos;argc&apos;]                   #包含传递给程序的命令行参数的个数（如果运行在命令行模式）。</span><br><span class="line">$_SERVER[&apos;GATEWAY_INTERFACE&apos;]   　　#服务器使用的 CGI 规范的版本。例如，“CGI/1.1”。</span><br><span class="line">$_SERVER[&apos;SERVER_NAME&apos;]           #当前运行脚本所在服务器主机的名称。</span><br><span class="line">$_SERVER[&apos;SERVER_SOFTWARE&apos;]       #服务器标识的字串，在响应请求时的头部中给出。</span><br><span class="line">$_SERVER[&apos;SERVER_PROTOCOL&apos;]       #请求页面时通信协议的名称和版本。例如，“HTTP/1.0”。</span><br><span class="line">$_SERVER[&apos;REQUEST_METHOD&apos;]        #访问页面时的请求方法。例如：“GET”、“HEAD”，“POST”，“PUT”。</span><br><span class="line">$_SERVER[&apos;QUERY_STRING&apos;]           #查询(query)的字符串。</span><br><span class="line">$_SERVER[&apos;DOCUMENT_ROOT&apos;]           #当前运行脚本所在的文档根目录。在服务器配置文件中定义。</span><br><span class="line">$_SERVER[&apos;HTTP_ACCEPT&apos;]            #当前请求的 Accept: 头部的内容。</span><br><span class="line">$_SERVER[&apos;HTTP_ACCEPT_CHARSET&apos;] 　　#当前请求的 Accept-Charset: 头部的内容。例如：“iso-8859-1,*,utf-8”。</span><br><span class="line">$_SERVER[&apos;HTTP_ACCEPT_ENCODING&apos;]　　#当前请求的 Accept-Encoding: 头部的内容。例如：“gzip”。</span><br><span class="line">$_SERVER[&apos;HTTP_ACCEPT_LANGUAGE&apos;]　　#当前请求的 Accept-Language: 头部的内容。例如：“en”。</span><br><span class="line">$_SERVER[&apos;HTTP_CONNECTION&apos;]       #当前请求的 Connection: 头部的内容。例如：“Keep-Alive”。</span><br><span class="line">$_SERVER[&apos;HTTP_HOST&apos;]             #当前请求的 Host: 头部的内容。</span><br><span class="line">$_SERVER[&apos;HTTP_REFERER&apos;]           #链接到当前页面的前一页面的 URL 地址。</span><br><span class="line">$_SERVER[&apos;HTTP_USER_AGENT&apos;]       #当前请求的 User_Agent: 头部的内容。</span><br><span class="line">$_SERVER[&apos;HTTPS&apos;]                 如果通过https访问,则被设为一个非空的值(on)，否则返回off</span><br><span class="line">$_SERVER[&apos;REMOTE_ADDR&apos;]           #正在浏览当前页面用户的 IP 地址。</span><br><span class="line">$_SERVER[&apos;REMOTE_HOST&apos;]           #正在浏览当前页面用户的主机名。</span><br><span class="line">$_SERVER[&apos;REMOTE_PORT&apos;]           #用户连接到服务器时所使用的端口。</span><br><span class="line">$_SERVER[&apos;SCRIPT_FILENAME&apos;]       #当前执行脚本的绝对路径名。</span><br><span class="line">$_SERVER[&apos;SERVER_ADMIN&apos;]           #管理员信息</span><br><span class="line">$_SERVER[&apos;SERVER_PORT&apos;]           #服务器所使用的端口</span><br><span class="line">$_SERVER[&apos;SERVER_SIGNATURE&apos;]       #包含服务器版本和虚拟主机名的字符串。</span><br><span class="line">$_SERVER[&apos;PATH_TRANSLATED&apos;]       #当前脚本所在文件系统（不是文档根目录）的基本路径。</span><br><span class="line">$_SERVER[&apos;SCRIPT_NAME&apos;]           #包含当前脚本的路径。这在页面需要指向自己时非常有用。</span><br><span class="line">$_SERVER[&apos;REQUEST_URI&apos;]           #访问此页面所需的 URI。例如，“/index.html”。</span><br><span class="line">$_SERVER[&apos;PHP_AUTH_USER&apos;]           #在 Apache模块下，并且正在使用 HTTP 认证功能，这个变量便是用户输入的用户名。</span><br><span class="line">$_SERVER[&apos;PHP_AUTH_PW&apos;]           #当 PHP 运行在 Apache 模块方式下，并且正在使用 HTTP 认证功能，这个变量便是用户输入的密码。</span><br><span class="line">$_SERVER[&apos;AUTH_TYPE&apos;]           #当 PHP 运行在 Apache 模块方式下，并且正在使用 HTTP 认证功能，这个变量便是认证的类型。</span><br></pre></td></tr></table></figure></p><h3 id="phpinfo"><a href="#phpinfo" class="headerlink" title="phpinfo()"></a>phpinfo()</h3><blockquote><p>实现位置：ext/standard/info.c</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;超全局变量&quot;&gt;&lt;a href=&quot;#超全局变量&quot; class=&quot;headerlink&quot; title=&quot;超全局变量&quot;&gt;&lt;/a&gt;超全局变量&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://php.net/manual/zh/language.variables.super
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="PHP" scheme="http://corey.wang/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenResty</title>
+    <link href="http://corey.wang/2017/04/25/OpenResty/"/>
+    <id>http://corey.wang/2017/04/25/OpenResty/</id>
+    <published>2017-04-25T10:20:29.000Z</published>
+    <updated>2018-08-17T01:01:06.866Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一句话介绍"><a href="#一句话介绍" class="headerlink" title="一句话介绍"></a>一句话介绍</h3><blockquote><p>OpenResty = Nginx + LuaJit + more lib of Lua<br><a href="http://openresty.org/cn/" target="_blank" rel="noopener">openresty官网</a><br>推荐学习教程：<a href="http://wiki.jikexueyuan.com/project/openresty-best-practice/" target="_blank" rel="noopener">OpenResty 最佳实践 By 极客学院</a></p></blockquote><h3 id="安装OpenResty"><a href="#安装OpenResty" class="headerlink" title="安装OpenResty"></a>安装OpenResty</h3><blockquote><p><em>没有比官网的文档更好的了</em><a href="http://openresty.org/cn/installation.html" target="_blank" rel="noopener">OpenResty 安装</a></p></blockquote><h3 id="Nginx-Lua模块化执行顺序"><a href="#Nginx-Lua模块化执行顺序" class="headerlink" title="Nginx Lua模块化执行顺序"></a>Nginx Lua模块化执行顺序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set_by_lua #流程分之处理判断变量初始化</span><br><span class="line">rewrite_by_lua #转发、重定向、缓存等功能(例如特定请求代理到外网)</span><br><span class="line">access_by_lua #IP 准入、接口权限等情况集中处理(例如配合 iptable 完成简单防火墙)</span><br><span class="line">content_by_lua #内容生成</span><br><span class="line">header_filter_by_lua    #应答 HTTP 过滤处理(例如添加头部信息)</span><br><span class="line">body_filter_by_lua #应答 BODY 过滤处理(例如完成应答内容统一成大写)</span><br><span class="line">log_by_lua #回话完成后本地异步完成日志记录(日志可以记录在本地，还可以同步到其他机器)</span><br></pre></td></tr></table></figure><h3 id="Lua-Code-Cache"><a href="#Lua-Code-Cache" class="headerlink" title="Lua Code Cache"></a>Lua Code Cache</h3><blockquote><p><a href="https://github.com/openresty/lua-nginx-module#directives" target="_blank" rel="noopener">lua-nginx-module directives</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># http, server, location, location if</span><br><span class="line">lua_code_cache off; #方便开发，线上一定要关闭，否则影响性能</span><br></pre></td></tr></table></figure></p></blockquote><h3 id="Lua-Kafka"><a href="#Lua-Kafka" class="headerlink" title="Lua Kafka"></a>Lua Kafka</h3><blockquote><p>使用的开源库：<a href="https://github.com/doujiang24/lua-resty-kafka" target="_blank" rel="noopener">https://github.com/doujiang24/lua-resty-kafka</a><br>直接下载源码到任意目录（最好是放到OpenResty/lualib下，方便统一管理）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># for http &#123;&#125;</span><br><span class="line">lua_package_path &quot;/path/to/lua-resty-kafka/lib/?.lua;;&quot;;</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>如果kafka使用了域名，需要在nginx.conf中开启dns解析，否则会导致域名解析失败，配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># for http &#123;&#125;</span><br><span class="line">resolver 10.10.10.10;</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一句话介绍&quot;&gt;&lt;a href=&quot;#一句话介绍&quot; class=&quot;headerlink&quot; title=&quot;一句话介绍&quot;&gt;&lt;/a&gt;一句话介绍&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;OpenResty = Nginx + LuaJit + more lib of Lua&lt;
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="OpenResty" scheme="http://corey.wang/tags/OpenResty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>salt-api</title>
+    <link href="http://corey.wang/2017/03/23/salt-api/"/>
+    <id>http://corey.wang/2017/03/23/salt-api/</id>
+    <published>2017-03-23T10:42:26.000Z</published>
+    <updated>2018-08-17T01:00:41.913Z</updated>
+    
+    <content type="html"><![CDATA[<p>###基础说明</p><blockquote><p>salt-api对外提供https api接口，方便使用salt相关的功能<br>salt-api需要部署在master的机器上<br>[官方文档] (<a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#a-rest-api-for-salt)，附件中是官方文档pdf版" target="_blank" rel="noopener">http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#a-rest-api-for-salt)，附件中是官方文档pdf版</a><br><a href="http://ju.outofmemory.cn/entry/97116" target="_blank" rel="noopener">参考blog</a></p></blockquote><p>###接口安全方面</p><blockquote><p>salt-api使用前需要调用login api（帐号密码）来获取token，后续的api请求使用token即可</p></blockquote><p>###依赖 </p><blockquote><p>使用pip安装salt时，默认已经安装了salt-ai<br>salt-api对外提供http服务，依赖Python的CherryPy库，这里需要检查本机是否已安装</p></blockquote><p>###配置过程</p><blockquote><p>生成https证书<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd  /etc/pki/tls/certs</span><br><span class="line"># 生成自签名证书, 过程中需要输入key密码及RDNs</span><br><span class="line">make testcert</span><br><span class="line">cd /etc/pki/tls/private/</span><br><span class="line"># 解密key文件，生成无密码的key文件, 过程中需要输入key密码，该密码为之前生成证书时设置的密码</span><br><span class="line">openssl rsa -in localhost.key -out localhost_nopass.key</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>创建salt-api的用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -M -s /sbin/nologin salt-api</span><br><span class="line">echo &quot;salt-api-passwd&quot; | passwd salt-api —stdin</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>配置权限, <a href="https://docs.saltstack.com/en/latest/topics/eauth/index.html" target="_blank" rel="noopener">eauth官网文档</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#/etc/salt/master.d/eauth.conf</span><br><span class="line">external_auth:</span><br><span class="line">  pam:</span><br><span class="line">    salt-api:</span><br><span class="line">      - .*</span><br><span class="line">      - &apos;@wheel&apos;</span><br><span class="line">      - &apos;@runner&apos;</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>配置api端口、证书等, 这里使用了cherrypy库（python的web库）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#/etc/salt/master.d/api.conf</span><br><span class="line">rest_cherrypy:</span><br><span class="line">  port: 8000</span><br><span class="line">  ssl_crt: /etc/pki/tls/certs/localhost.crt</span><br><span class="line">  ssl_key: /etc/pki/tls/private/localhost_nopass.key</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p>启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">salt-api -d --log-file-level=all</span><br><span class="line">#这里的日志级别为all是为了测试用，日志级别包含：&apos;all&apos;, &apos;garbage&apos;, &apos;trace&apos;, &apos;debug&apos;, &apos;profile&apos;, &apos;info&apos;, &apos;warning&apos;,&apos;error&apos;, &apos;critical&apos;, &apos;quiet&apos;. Default: &apos;warning&apos;</span><br></pre></td></tr></table></figure></p></blockquote><p>###api接口列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回JSON格式，head中增加Accept:application/json</span><br></pre></td></tr></table></figure></p><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#id1?_blank" target="_blank" rel="noopener">/</a> </p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#GET</span><br><span class="line">获取当前的client</span><br><span class="line">#POST</span><br><span class="line">执行salt命令</span><br></pre></td></tr></table></figure><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#login" target="_blank" rel="noopener">/login</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Log in to recieve a session token</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#logout" target="_blank" rel="noopener">/logout</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#POST</span><br><span class="line">Destroy the currently active session and expire the session cookie</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#minions" target="_blank" rel="noopener">/minions</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#GET /minions/(mid)</span><br><span class="line">有mid时，查询mid机器的详细信息，没有mid时查询所有的minion的详细信息</span><br><span class="line">#POST /minions</span><br><span class="line">远程执行命令，并返回jobid，相当于/执行命令中的client=local_async</span><br><span class="line">这里并没直接返回结果，需要通过jobs结果查询返回结果</span><br><span class="line">适合异步的场景</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#jobs" target="_blank" rel="noopener">/jobs</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#GET /jobs/(jid)</span><br><span class="line">A convenience URL for getting lists of previously run jobs or getting the return from a single job</span><br><span class="line">有jid时，查询该job的详细结果</span><br><span class="line">无jid，返回job列表（执行job时的参数和jobid）</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#run" target="_blank" rel="noopener">/run</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#POST</span><br><span class="line">不使用token的方式执行，这里需要每次请求带着用户名密码等认证信息</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#events" target="_blank" rel="noopener">/events</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#GET 需要深入了解</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#ws" target="_blank" rel="noopener">/ws</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#GET /ws/(token)</span><br><span class="line">Return a websocket connection of Salt&apos;s event stream</span><br><span class="line">对url api的补充，大数据量时可以使用这个。</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#hook" target="_blank" rel="noopener">/hook</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#POST /hook   具体用途还需了解</span><br><span class="line">Fire an event in Salt with a custom event tag and data</span><br></pre></td></tr></table></figure></p></blockquote><blockquote><p><a href="http://salt-api.readthedocs.io/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#stats" target="_blank" rel="noopener">/stats</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#GET /stats</span><br><span class="line">Expose statistics on the running CherryPy server</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###基础说明&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;salt-api对外提供https api接口，方便使用salt相关的功能&lt;br&gt;salt-api需要部署在master的机器上&lt;br&gt;[官方文档] (&lt;a href=&quot;http://salt-api.readthed
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="salt" scheme="http://corey.wang/tags/salt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Salt Statck</title>
+    <link href="http://corey.wang/2017/03/23/Salt-Statck/"/>
+    <id>http://corey.wang/2017/03/23/Salt-Statck/</id>
+    <published>2017-03-23T10:39:47.000Z</published>
+    <updated>2018-08-17T01:00:34.991Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>简介</p><blockquote><p>SaltStack是一个服务器基础架构集中化管理平台，具备配置管理、远程执行、监控等功能，一般可以理解为简化版的puppet和加强版的func。SaltStack基于Python语言实现，结合轻量级消息队列（ZeroMQ）与Python第三方模块（Pyzmq、PyCrypto、Pyjinjia2、python-msgpack和PyYAML等）构建。<br>通过部署SaltStack环境，我们可以在成千上万台服务器上做到批量执行命令，根据不同业务特性进行配置集中化管理、分发文件、采集服务器数据、操作系统基础及软件包管理等，SaltStack是运维人员提高工作效率、规范业务配置与操作的利器。</p></blockquote></li><li><p>使用版本</p><blockquote><p>2016.11<br><a href="https://github.com/saltstack/salt" target="_blank" rel="noopener">https://github.com/saltstack/salt</a></p></blockquote></li><li><p>测试环境</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1台master， 2台minion</span><br><span class="line">```        </span><br><span class="line"> </span><br><span class="line">- 模块及配置</span><br><span class="line">&gt; salt-master</span><br><span class="line">&gt; salt-minion</span><br><span class="line">&gt; [salt-api](http://corey.wang/2017/03/23/salt-api/)</span><br><span class="line"> </span><br><span class="line">- salt命令解析 [blog](http://arlen.blog.51cto.com/7175583/1424684)  [blog2](http://noodle.blog.51cto.com/2925423/1744607)  [官方文档](https://docs.saltstack.com/en/latest/ref/cli/salt.html)</span><br><span class="line"></span><br><span class="line">- &lt;b&gt;个人整理&lt;/b&gt;</span><br><span class="line">```salt &apos;&lt;target&gt;&apos; &lt;function&gt; [arguments]</span><br></pre></td></tr></table></figure></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">salt &apos;*&apos; cp.get_file salt://jdk-8u121-linux-x64.rpm  /tmp/jdk-8u121-linux-x64.rpm  #把salt-master端对应文件拷贝到minion端相应目录下, salt://默认为/srv/salt，master中可以配置</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;rpm -ivh /tmp/jdk-8u121-linux-x64.rpm&apos; #远程安装jdk， 可以增加template=jinja，使命令支持jinja模板，方便不同机器自动替换相应的参数</span><br><span class="line">salt &apos;*&apos; cp.get_file salt://apache-tomcat-8.0.35.zip /tmp/apache-tomcat-8.0.35.zip #copy tomcat到minion</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.run &apos;cd ~ &amp; mkdir tools&apos; #远程创建tools文件夹，如果该文件夹已存在，*会报错*，使用salt &apos;*&apos; file.mkdir /tmp/wangchao36-test命令也可以</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;unzip /tmp/apache-tomcat-8.0.35.zip -d /root/tools/&apos; #解压tomcat</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;chmod +x /root/tools/apache-tomcat-8.0.35/bin/*.sh &amp; /root/tools/apache-tomcat-8.0.35/bin/startup.sh&apos; #启动tomcat</span><br><span class="line">salt &apos;*&apos; cmd.run &apos;ps -ef | grep tomcat&apos;  # 查看tomcat关键词的进程</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">salt &apos;*&apos; pkg.install httpd #执行安装命令, 相当于apt-get, yum</span><br><span class="line">salt &apos;*&apos; lowpkg.bin_pkg_info /tmp/jdk-8u121-linux-x64.rpm # 查询rpm包信息，lowpkg相当于rpm命令</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.script salt://scripts/runme.sh #远程执行一个脚本</span><br><span class="line"></span><br><span class="line">salt &apos;*&apos; cmd.run &apos;pip install psutil&apos; #ps模块需要提前安全psutil</span><br><span class="line">salt &apos;*&apos; ps.pgrep tomcat full=true  #查询tomcat相关进程的pid</span><br><span class="line">salt &apos;*&apos; ps.psaux tomcat #ps aux |grep tomcat</span><br><span class="line"> </span><br><span class="line">salt &apos;*&apos; file.append /root/tools/apache-tomcat-8.0.35/bin/catalina.sh dddd  #在文件尾增加</span><br><span class="line">salt &apos;*&apos; file.grep /root/tools/apache-tomcat-8.0.35/bin/catalina.sh ddd #文件中查找</span><br><span class="line">salt &apos;*&apos; file.comment_line /root/tools/apache-tomcat-8.0.35/bin/catalina.sh ddd #行加注释</span><br><span class="line">salt &apos;*&apos; file.seek_read /root/tools/apache-tomcat-8.0.35/bin/catalina.sh 1000 0 #读</span><br><span class="line">salt &apos;*&apos; file.seek_write /root/tools/apache-tomcat-8.0.35/bin/catalina.sh &apos;#xxx&apos;1000 #写 1000为offset</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;简介&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SaltStack是一个服务器基础架构集中化管理平台，具备配置管理、远程执行、监控等功能，一般可以理解为简化版的puppet和加强版的func。SaltStack基于Python语言实现，结合轻量级消息队列（Z
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="salt" scheme="http://corey.wang/tags/salt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Storm入门</title>
+    <link href="http://corey.wang/2017/03/21/Storm%E5%85%A5%E9%97%A8/"/>
+    <id>http://corey.wang/2017/03/21/Storm入门/</id>
+    <published>2017-03-21T04:45:34.000Z</published>
+    <updated>2018-08-17T01:03:15.837Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul><li>免费且开源的实时计算系统</li><li>简单可靠的处理流式数据，而Hadoop是使用的批处理</li><li>不受开发语言的限制（kryo序列化库）</li></ul><h2 id="hadoop-spark-storm等对比"><a href="#hadoop-spark-storm等对比" class="headerlink" title="hadoop/spark/storm等对比"></a>hadoop/spark/storm等对比</h2><table><thead><tr><th>*</th><th>hadoop M/R</th><th>spark</th><th>storm </th></tr></thead><tbody><tr><td>存储</td><td>磁盘</td><td>内存</td><td>内存 </td></tr><tr><td>数据集</td><td>现有数据集</td><td>现有数据集</td><td>实时 </td></tr><tr><td>任务状态</td><td>作业管理</td><td>作业管理</td><td>常住内存 </td></tr><tr><td>常用场景</td><td>离线的复杂的大数据处理</td><td>离线的快速大数据处理</td><td>在线的实时的大数据处理</td></tr></tbody></table><p><em>Spark Streaming和Storm类似</em></p><p><a href="http://www.cnblogs.com/snowbook/p/5773562.html" target="_blank" rel="noopener">read more</a></p><h2 id="storm核心概念"><a href="#storm核心概念" class="headerlink" title="storm核心概念"></a>storm核心概念</h2><h3 id="官方抽象图"><a href="#官方抽象图" class="headerlink" title="官方抽象图"></a>官方抽象图</h3><p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fucf2lxhgyj30xc0dwmxh.jpg" alt="image"><br><img src="http://jstorm.io:8080/img/quickstart/conception/spoutbolt.jpg" alt="image"></p><h3 id="集群结构图"><a href="#集群结构图" class="headerlink" title="集群结构图"></a>集群结构图</h3><p><img src="http://www.aboutyun.com/data/attachment/forum/201404/15/225641mt3v1okkkrkkp3rk.jpg" alt="image"></p><h3 id="Topologies"><a href="#Topologies" class="headerlink" title="Topologies"></a>Topologies</h3><p>一个完整的计算主体，相当于是一个M/R任务，区别是M/R任务执行完会退出，而topology永远运行（除非被主动kill）</p><h3 id="Streams、tuples"><a href="#Streams、tuples" class="headerlink" title="Streams、tuples"></a>Streams、tuples</h3><p>Storm里面最核心的抽象，Streams使用tuple，tuples可以理解为最小的数据类型元组，可以为 integers, longs, shorts, bytes, strings, doubles, floats, booleans, and byte arrays。也支持自定义可序列化的类型</p><h3 id="Spout"><a href="#Spout" class="headerlink" title="Spout"></a>Spout</h3><p>数据源，一般是消息队列，将数据发送到Bolts</p><h3 id="Bolts"><a href="#Bolts" class="headerlink" title="Bolts"></a>Bolts</h3><p>具体执行数据分析的节点</p><h3 id="Stream-groupings"><a href="#Stream-groupings" class="headerlink" title="Stream groupings"></a>Stream groupings</h3><p>定义了每个bolt的数据发送策略</p><ul><li>shuffle grouping</li><li>fields grouping</li><li>All grouping(广播，所有bolts都会收到)</li><li>etc.</li></ul><p><img src="http://www.aboutyun.com/data/attachment/forum/201404/15/225648a4s3a4a4ll2la0l3.jpg" alt="image"></p><p><a href="http://blog.itpub.net/29754888/viewspace-1260026/" target="_blank" rel="noopener">read more1</a> <a href="http://storm.apache.org/releases/1.0.3/Concepts.html" target="_blank" rel="noopener">read more2</a></p><h2 id="数据的一致性，可靠性"><a href="#数据的一致性，可靠性" class="headerlink" title="数据的一致性，可靠性"></a>数据的一致性，可靠性</h2><ul><li>每个tuple拥有一个messageId</li><li>Acker机制，每个Topology拥有一个Acker，可以追踪messageId</li><li>Spout、Bolt发出数据后通知Acker自己处理的messageId</li><li>消息处理失败后，Tuple会被重新发出</li></ul><h2 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * This topology demonstrates Storm's stream groupings and multilang capabilities.</span></span><br><span class="line"><span class="comment"> * source: https://github.com/apache/storm/blob/v1.0.3/examples/storm-starter/src/jvm/org/apache/storm/starter/WordCountTopology.java</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCountTopology</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SplitSentence</span> <span class="keyword">extends</span> <span class="title">ShellBolt</span> <span class="keyword">implements</span> <span class="title">IRichBolt</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SplitSentence</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(<span class="string">"python"</span>, <span class="string">"splitsentence.py"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">declareOutputFields</span><span class="params">(OutputFieldsDeclarer declarer)</span> </span>&#123;</span><br><span class="line">      declarer.declare(<span class="keyword">new</span> Fields(<span class="string">"word"</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getComponentConfiguration</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCount</span> <span class="keyword">extends</span> <span class="title">BaseBasicBolt</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Integer&gt; counts = <span class="keyword">new</span> HashMap&lt;String, Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(Tuple tuple, BasicOutputCollector collector)</span> </span>&#123;</span><br><span class="line">      String word = tuple.getString(<span class="number">0</span>);</span><br><span class="line">      Integer count = counts.get(word);</span><br><span class="line">      <span class="keyword">if</span> (count == <span class="keyword">null</span>)</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">      count++;</span><br><span class="line">      counts.put(word, count);</span><br><span class="line">      collector.emit(<span class="keyword">new</span> Values(word, count));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">declareOutputFields</span><span class="params">(OutputFieldsDeclarer declarer)</span> </span>&#123;</span><br><span class="line">      declarer.declare(<span class="keyword">new</span> Fields(<span class="string">"word"</span>, <span class="string">"count"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 主方法</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    TopologyBuilder builder = <span class="keyword">new</span> TopologyBuilder();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置输入</span></span><br><span class="line">    builder.setSpout(<span class="string">"spout"</span>, <span class="keyword">new</span> RandomSentenceSpout(), <span class="number">5</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 计算</span></span><br><span class="line">    builder.setBolt(<span class="string">"split"</span>, <span class="keyword">new</span> SplitSentence(), <span class="number">8</span>).shuffleGrouping(<span class="string">"spout"</span>);</span><br><span class="line"></span><br><span class="line">    builder.setBolt(<span class="string">"count"</span>, <span class="keyword">new</span> WordCount(), <span class="number">12</span>).fieldsGrouping(<span class="string">"split"</span>, <span class="keyword">new</span> Fields(<span class="string">"word"</span>));</span><br><span class="line"></span><br><span class="line">    Config conf = <span class="keyword">new</span> Config();</span><br><span class="line">    conf.setDebug(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (args != <span class="keyword">null</span> &amp;&amp; args.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      conf.setNumWorkers(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">      StormSubmitter.submitTopologyWithProgressBar(args[<span class="number">0</span>], conf, builder.createTopology());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      conf.setMaxTaskParallelism(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">      LocalCluster cluster = <span class="keyword">new</span> LocalCluster();</span><br><span class="line">      cluster.submitTopology(<span class="string">"word-count"</span>, conf, builder.createTopology());</span><br><span class="line"></span><br><span class="line">      Thread.sleep(<span class="number">10000</span>);</span><br><span class="line"></span><br><span class="line">      cluster.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;免费且开源的实时计算系统&lt;/li&gt;
+&lt;li&gt;简单可靠的处理流式数据，而Hadoop是使用的批处理&lt;/li&gt;
+&lt;li&gt;不受开发语言
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="storm,bigdata" scheme="http://corey.wang/tags/storm-bigdata/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推荐使用Hexo搭建个人博客</title>
+    <link href="http://corey.wang/2017/03/01/hello-world/"/>
+    <id>http://corey.wang/2017/03/01/hello-world/</id>
+    <published>2017-03-01T10:20:29.000Z</published>
+    <updated>2018-08-17T01:01:49.459Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><h2 id="Hexo博客部署到Github"><a href="#Hexo博客部署到Github" class="headerlink" title="Hexo博客部署到Github"></a>Hexo博客部署到Github</h2><p><a href="http://www.cnblogs.com/imapla/p/5533000.html" target="_blank" rel="noopener">超完美教程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://corey.wang/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Hexo" scheme="http://corey.wang/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
