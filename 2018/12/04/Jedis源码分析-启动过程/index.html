@@ -176,11 +176,10 @@
     </div>
     
     <div class="post-body post-content">
-        <p>#基础知识</p>
-<blockquote>
+        <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><blockquote>
 <p>Jedis为Redis for java驱动的一种开源实现方式，其中可以支持单机版Redis、Redis Cluster版，Redis Sentinel模式（哨兵）<br>使用了JedisCluster，JedisCluster 为Jedis的cluster版驱动实现，以下为jedis 2.7.0版本的源码<br>hashslots：哈希槽，16384个，和Redis Cluster集群版保持一致，每个slot会对应到一个Redis Master</p>
 </blockquote>
-<p>#初始化做了什么<br>项目配置了一个IP:PORT，Jedis会通过cluster nodes命令来获取Redis集群的信息<br>Redis集群的信息包含：节点连接池（Nodes，每个节点都会初始化一个JedisPool），哈希槽对应的节点（Slots，每个哈希槽都会对应到节点连接池）<br>初始化过程源码分析</p>
+<h1 id="初始化做了什么"><a href="#初始化做了什么" class="headerlink" title="初始化做了什么"></a>初始化做了什么</h1><p>项目配置了一个IP:PORT，Jedis会通过cluster nodes命令来获取Redis集群的信息<br>Redis集群的信息包含：节点连接池（Nodes，每个节点都会初始化一个JedisPool），哈希槽对应的节点（Slots，每个哈希槽都会对应到节点连接池）<br>初始化过程源码分析</p>
 <h2 id="JedisCluster"><a href="#JedisCluster" class="headerlink" title="#JedisCluster"></a>#JedisCluster</h2><p>DEFAULT_MAX_REDIRECTIONS = 5；// 重要的参数，在获取链接时的重试次数<br>JedisSlotBasedConnectionHandler初始化时会调用 initializeSlotsCache(nodes, poolConfig);<br>initializeSlotsCache会调用JedisClusterInfoCache.discoverClusterNodesAndSlots() 来初始化nodes，slots<br><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxujijkr9kj31b00pcgoj.jpg" alt=""></p>
 <h2 id="JedisClusterInfoCache"><a href="#JedisClusterInfoCache" class="headerlink" title="#JedisClusterInfoCache"></a>#JedisClusterInfoCache</h2><p>nodes map 为  ip:port  ==&gt; JedisPool (这个节点的连接池)， 数量为Redis Cluster节点数量<br>slots map 为 [0 – 16383] ==&gt; JedisPool，每个哈希槽对应节点的连接池<br><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxujq5tweej30xq03u3yn.jpg" alt=""></p>
 <h2 id="获取Cluster-Nodes，对应redis-cli-c-cluster-nodes"><a href="#获取Cluster-Nodes，对应redis-cli-c-cluster-nodes" class="headerlink" title="#获取Cluster Nodes，对应redis-cli -c cluster nodes"></a>#获取Cluster Nodes，对应redis-cli -c cluster nodes</h2><p>保存到变量localNodes中<br><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fxujqe1nsbj31nm0u0ah3.jpg" alt=""></p>
@@ -251,7 +250,7 @@
     <div class="widget">
         <h3 class="title">Table of Contents</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisCluster"><span class="toc-text">#JedisCluster</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisClusterInfoCache"><span class="toc-text">#JedisClusterInfoCache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取Cluster-Nodes，对应redis-cli-c-cluster-nodes"><span class="toc-text">#获取Cluster Nodes，对应redis-cli -c cluster nodes</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础知识"><span class="toc-text">基础知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初始化做了什么"><span class="toc-text">初始化做了什么</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisCluster"><span class="toc-text">#JedisCluster</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisClusterInfoCache"><span class="toc-text">#JedisClusterInfoCache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取Cluster-Nodes，对应redis-cli-c-cluster-nodes"><span class="toc-text">#获取Cluster Nodes，对应redis-cli -c cluster nodes</span></a></li></ol></li></ol>
         
     </div>
 </aside>
