@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>PPIC周报机制 | Corey.Wang</title>
+<title>Jedis源码分析-启动过程 | Corey.Wang</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Corey.Wang" type="application/atom+xml">
@@ -132,9 +132,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="PPIC周报机制">
+        <h1 id="Jedis源码分析-启动过程">
             
-	            PPIC周报机制
+	            Jedis源码分析-启动过程
             
         </h1>
         <div class="post-meta">
@@ -153,8 +153,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/团队" title='团队'>
-                        团队
+                    <a href="/tags/技术, redis" title='技术, redis'>
+                        技术, redis
                     </a>
                 
             
@@ -166,7 +166,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2018/11/19</span>
+            <span class="date-meta">2018/12/04</span>
         </span>
     
 </div>
@@ -176,23 +176,18 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>PPIC，可以理解为“周报机制”，人员管理的一种方法，在互联网企业比较常见。根据这个模型，可以很好地管理本周工作和下周的工作计划，协调部门间的工作。该模型是个非常好的管理方式模型。</p>
-<h1 id="每个字母的含义"><a href="#每个字母的含义" class="headerlink" title="每个字母的含义"></a>每个字母的含义</h1><ul>
-<li>第一个Plan 是上周的工作计划和本周的工作计划</li>
-<li>第二个P是“Progress”，进展，每个事项的工作进展如何</li>
-<li>第三个字母I是指Issue，工作推进工程中遇到哪些问题</li>
-<li>第四个字母C是指Calendar，时间点，项目的时间点。便于项目管理</li>
-</ul>
+        <p>#基础知识</p>
 <blockquote>
-<p>其它第三个I是“Issues”，遇到的问题，需要上级帮助解决的，比如部门间的沟通问题、决策上的问题等。<br>最后一个C是关键时间点。</p>
+<p>Jedis为Redis for java驱动的一种开源实现方式，其中可以支持单机版Redis、Redis Cluster版，Redis Sentinel模式（哨兵）<br>使用了JedisCluster，JedisCluster 为Jedis的cluster版驱动实现，以下为jedis 2.7.0版本的源码<br>hashslots：哈希槽，16384个，和Redis Cluster集群版保持一致，每个slot会对应到一个Redis Master</p>
 </blockquote>
-<h1 id="内容要求"><a href="#内容要求" class="headerlink" title="内容要求"></a>内容要求</h1><p>简单、清晰，注重成果展示，避免流水账记录</p>
-<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><ul>
-<li>Plan：本月、本季度、半年的阶段性目标，最好可细化到月份。</li>
-<li>Progress：本周的工作情况，优先成果性内容，进展中的工作择优择重而写。</li>
-<li>Issue：目前工作中遇到的问题，非必填项。</li>
-<li>Calendar：下周计划为主，可延伸到本月一些关键时间节点。</li>
-</ul>
+<p>#初始化做了什么<br>项目配置了一个IP:PORT，Jedis会通过cluster nodes命令来获取Redis集群的信息<br>Redis集群的信息包含：节点连接池（Nodes，每个节点都会初始化一个JedisPool），哈希槽对应的节点（Slots，每个哈希槽都会对应到节点连接池）<br>初始化过程源码分析</p>
+<h2 id="JedisCluster"><a href="#JedisCluster" class="headerlink" title="#JedisCluster"></a>#JedisCluster</h2><p>DEFAULT_MAX_REDIRECTIONS = 5；// 重要的参数，在获取链接时的重试次数<br>JedisSlotBasedConnectionHandler初始化时会调用 initializeSlotsCache(nodes, poolConfig);<br>initializeSlotsCache会调用JedisClusterInfoCache.discoverClusterNodesAndSlots() 来初始化nodes，slots<br><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxujijkr9kj31b00pcgoj.jpg" alt=""></p>
+<h2 id="JedisClusterInfoCache"><a href="#JedisClusterInfoCache" class="headerlink" title="#JedisClusterInfoCache"></a>#JedisClusterInfoCache</h2><p>nodes map 为  ip:port  ==&gt; JedisPool (这个节点的连接池)， 数量为Redis Cluster节点数量<br>slots map 为 [0 – 16383] ==&gt; JedisPool，每个哈希槽对应节点的连接池<br><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxujq5tweej30xq03u3yn.jpg" alt=""></p>
+<h2 id="获取Cluster-Nodes，对应redis-cli-c-cluster-nodes"><a href="#获取Cluster-Nodes，对应redis-cli-c-cluster-nodes" class="headerlink" title="#获取Cluster Nodes，对应redis-cli -c cluster nodes"></a>#获取Cluster Nodes，对应redis-cli -c cluster nodes</h2><p>保存到变量localNodes中<br><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fxujqe1nsbj31nm0u0ah3.jpg" alt=""></p>
+<p>分析cluster nodes里面包含的slot<br><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fxujqk9f3lj31gs0mqdid.jpg" alt=""></p>
+<p>Slot只会对应到Master节点，slave节点会被忽略掉<br>SLOT_INFORMATIONS_START_INDEX = 8;<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxujqokenvj31ws0mm0vv.jpg" alt=""></p>
+<p>Slave节点的Slot处理<br><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxujquk24hj31y40cu76g.jpg" alt=""></p>
+<p>初始化完之后的内容<br><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fxujr21o1bj30s41ba42g.jpg" alt=""></p>
 
     </div>
 
@@ -210,15 +205,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/12/04/Jedis源码分析-启动过程/" class="pre-post btn btn-default" title='Jedis源码分析-启动过程'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">Jedis源码分析-启动过程</span>
-        </a>
     
-    
-        <a href="/2018/11/16/技术leader的成长/" class="next-post btn btn-default" title='技术&技术leader的成长'>
+        <a href="/2018/11/19/PPIC周报机制/" class="next-post btn btn-default" title='PPIC周报机制'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">技术&技术leader的成长</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">PPIC周报机制</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -261,7 +251,7 @@
     <div class="widget">
         <h3 class="title">Table of Contents</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#定义"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#每个字母的含义"><span class="toc-text">每个字母的含义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#内容要求"><span class="toc-text">内容要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#模板"><span class="toc-text">模板</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisCluster"><span class="toc-text">#JedisCluster</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JedisClusterInfoCache"><span class="toc-text">#JedisClusterInfoCache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取Cluster-Nodes，对应redis-cli-c-cluster-nodes"><span class="toc-text">#获取Cluster Nodes，对应redis-cli -c cluster nodes</span></a></li></ol>
         
     </div>
 </aside>
