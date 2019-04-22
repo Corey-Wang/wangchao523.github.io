@@ -5,7 +5,7 @@ node_js: stable
 # 指定构建的分支
 branches:
   only:
-    - master
+    - hexo
 
 # 指定node_modules缓存
 cache:
